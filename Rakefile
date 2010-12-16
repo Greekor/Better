@@ -20,5 +20,12 @@ task :run do
   
   ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => "db/development.sqlite3")
   
+  require 'models/betname.rb'
+  require 'models/bookie_game.rb'
+  require 'models/bookmaker.rb'
+  require 'models/game.rb'
+  require 'models/odd.rb'
+  require 'models/teamname.rb'
+  
   require 'main.rb'
 end
