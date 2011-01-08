@@ -59,10 +59,6 @@
                 models/game.rb
                 </a>
         <br />
-                <a href="../files/db/migrations/20101211223524_game_rb.html">
-                db/migrations/20101211223524_game.rb
-                </a>
-        <br />
             </td>
         </tr>
 
@@ -82,18 +78,38 @@
 
   <div id="contextContent">
 
+    <div id="description">
+      <p>
+This class represents a sports game. Through this class, all important
+informations can be accessed
+</p>
+<h3>Attributes</h3>
+<ul>
+<li>bookie_games
+
+</li>
+<li>odds
+
+</li>
+<li>home
+
+</li>
+<li>away
+
+</li>
+<li>created_at
+
+</li>
+<li>updated_at
+
+</li>
+</ul>
+
+    </div>
 
 
    </div>
 
-    <div id="method-list">
-      <h3 class="section-bar">Methods</h3>
-
-      <div class="name-list">
-      <a href="#M000011">down</a>&nbsp;&nbsp;
-      <a href="#M000010">up</a>&nbsp;&nbsp;
-      </div>
-    </div>
 
   </div>
 
@@ -110,63 +126,6 @@
 
 
     <!-- if method_list -->
-    <div id="methods">
-      <h3 class="section-bar">Public Class methods</h3>
-
-      <div id="method-M000011" class="method-detail">
-        <a name="M000011"></a>
-
-        <div class="method-heading">
-          <a href="#M000011" class="method-signature">
-          <span class="method-name">down</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000011-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000011-source">
-<pre>
-<span class="ruby-comment cmt"># File db/migrations/20101211223524_game.rb, line 12</span>
-  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">down</span>
-    <span class="ruby-identifier">drop_table</span> <span class="ruby-identifier">:games</span>
-  <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000010" class="method-detail">
-        <a name="M000010"></a>
-
-        <div class="method-heading">
-          <a href="#M000010" class="method-signature">
-          <span class="method-name">up</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000010-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000010-source">
-<pre>
-<span class="ruby-comment cmt"># File db/migrations/20101211223524_game.rb, line 2</span>
-  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">up</span>
-    <span class="ruby-identifier">create_table</span> <span class="ruby-identifier">:games</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
-      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">references</span> <span class="ruby-identifier">:team1</span>, <span class="ruby-identifier">:team2</span>
-      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">references</span> <span class="ruby-identifier">:sport</span>, <span class="ruby-identifier">:league</span>
-      
-      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">datetime</span> <span class="ruby-identifier">:time</span>
-      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">timestamps</span>
-    <span class="ruby-keyword kw">end</span>
-  <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
 
 
   </div>

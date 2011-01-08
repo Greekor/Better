@@ -1,5 +1,19 @@
 require 'rubygems'
 require 'active_record'
+require 'logger'
+
+# Add installation directory to load path
+$:.push('.') if $:.last != '.'
+
+ActiveRecord::Base.logger = Logger.new("logfile.log")
+ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => "db/development.sqlite3")
+  
+require 'models/betname.rb'
+require 'models/bookie_game.rb'
+require 'models/bookmaker.rb'
+require 'models/game.rb'
+require 'models/odd.rb'
+require 'models/teamname.rb'
 
 begin
   require 'tasks/standalone_migrations'  
@@ -16,16 +30,14 @@ rescue LoadError => e
   puts "gem install standalone_migrations to get db:migrate:* tasks! (Error: #{e})"
 end
 
-task :run do
-  
-  ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => "db/development.sqlite3")
-  
-  require 'models/betname.rb'
-  require 'models/bookie_game.rb'
-  require 'models/bookmaker.rb'
-  require 'models/game.rb'
-  require 'models/odd.rb'
-  require 'models/teamname.rb'
-  
-  require 'main.rb'
+task :analyze do 
+  require 'analyze.rb'
+end
+
+task :scrap do
+  require 'scrap'
+end
+
+task :mapTeamnames do
+  require 'map_teamnames'
 end

@@ -1,0 +1,994 @@
+# Logfile created on Mon Dec 20 17:01:06 +0100 2010 by logger.rb/22285
+D, [2010-12-20T17:01:07.069441 #11392] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2010-12-20T17:01:07.070332 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2010-12-20T17:01:07.070904 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Bet365') LIMIT 1[0m
+D, [2010-12-20T17:01:07.072654 #11392] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'LA Lakers') AND ("bookie_games"."team2" = 'Pittsburgh') LIMIT 1
+D, [2010-12-20T17:01:07.073272 #11392] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Lakers') AND ("bookie_games"."team2" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2010-12-20T17:01:07.073875 #11392] DEBUG -- :   [1m[35mBookieGame Load (0.1ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Chicago Bears') AND ("bookie_games"."team2" = 'New York Yankees') LIMIT 1
+D, [2010-12-20T17:01:07.074528 #11392] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'CH Bears') AND ("bookie_games"."team2" = 'NY Yankees') LIMIT 1[0m
+D, [2010-12-20T17:01:07.116115 #11392] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) AND ("teamnames"."name" = 'LA Lakers') LIMIT 1
+D, [2010-12-20T17:01:07.116790 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) AND ("teamnames"."name" = 'Pittsburgh') LIMIT 1[0m
+D, [2010-12-20T17:01:07.118253 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.118824 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1[0m
+D, [2010-12-20T17:01:07.123095 #11392] DEBUG -- :   [1m[35mGame Load (0.1ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."team1_id" = 17) AND ("games"."team2_id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.129216 #11392] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) AND ("teamnames"."name" = 'Chicago Bears') LIMIT 1[0m
+D, [2010-12-20T17:01:07.129846 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) AND ("teamnames"."name" = 'New York Yankees') LIMIT 1
+D, [2010-12-20T17:01:07.130426 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1[0m
+D, [2010-12-20T17:01:07.130963 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1
+D, [2010-12-20T17:01:07.131558 #11392] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."team1_id" = 19) AND ("games"."team2_id" = 20) LIMIT 1[0m
+D, [2010-12-20T17:01:07.134378 #11392] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 4) AND ("teamnames"."name" = 'Lakers') LIMIT 1
+D, [2010-12-20T17:01:07.134978 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 4) AND ("teamnames"."name" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2010-12-20T17:01:07.135518 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.136052 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1[0m
+D, [2010-12-20T17:01:07.136681 #11392] DEBUG -- :   [1m[35mGame Load (0.1ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."team1_id" = 17) AND ("games"."team2_id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.138185 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 4) AND ("teamnames"."name" = 'CH Bears') LIMIT 1[0m
+D, [2010-12-20T17:01:07.138782 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 4) AND ("teamnames"."name" = 'NY Yankees') LIMIT 1
+D, [2010-12-20T17:01:07.139320 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1[0m
+D, [2010-12-20T17:01:07.139847 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1
+D, [2010-12-20T17:01:07.140432 #11392] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."team1_id" = 19) AND ("games"."team2_id" = 20) LIMIT 1[0m
+D, [2010-12-20T17:01:07.143217 #11392] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1
+D, [2010-12-20T17:01:07.143912 #11392] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'moneyline') LIMIT 1[0m
+D, [2010-12-20T17:01:07.144577 #11392] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1
+D, [2010-12-20T17:01:07.145202 #11392] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-20T17:01:07.145828 #11392] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'moneyline') LIMIT 1
+D, [2010-12-20T17:01:07.146452 #11392] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-20T17:01:07.147095 #11392] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-20T17:01:07.147717 #11392] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Sieg') LIMIT 1[0m
+D, [2010-12-20T17:01:07.148332 #11392] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1
+D, [2010-12-20T17:01:07.148954 #11392] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-20T17:01:07.149573 #11392] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Sieg') LIMIT 1
+D, [2010-12-20T17:01:07.150196 #11392] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-20T17:01:07.156252 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'over/under 2.5') LIMIT 1
+D, [2010-12-20T17:01:07.157722 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.159046 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:01:07.164499 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'moneyline') LIMIT 1[0m
+D, [2010-12-20T17:01:07.165147 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2010-12-20T17:01:07.165700 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:01:07.202066 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'handicap -1.5') LIMIT 1
+D, [2010-12-20T17:01:07.202733 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.203293 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:01:07.205269 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-20T17:01:07.205870 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2010-12-20T17:01:07.206453 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:01:07.208303 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'moneyline') LIMIT 1
+D, [2010-12-20T17:01:07.208894 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.209446 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:01:07.211349 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-20T17:01:07.211957 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2010-12-20T17:01:07.212511 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.214339 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-20T17:01:07.214904 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:01:07.215457 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:01:07.217288 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Sieg') LIMIT 1[0m
+D, [2010-12-20T17:01:07.217847 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2010-12-20T17:01:07.218385 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:01:07.220244 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Handi 1,5') LIMIT 1
+D, [2010-12-20T17:01:07.220819 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:01:07.221359 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:01:07.223223 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-20T17:01:07.223781 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2010-12-20T17:01:07.224356 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:01:07.226148 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Sieg') LIMIT 1
+D, [2010-12-20T17:01:07.226725 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:01:07.227260 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:01:07.228962 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-20T17:01:07.229491 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2010-12-20T17:01:07.230014 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.231885 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) AND ("teamnames"."name" = 'LA Lakers') LIMIT 1
+D, [2010-12-20T17:01:07.232505 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) AND ("teamnames"."name" = 'Pittsburgh') LIMIT 1[0m
+D, [2010-12-20T17:01:07.233053 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.233587 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1[0m
+D, [2010-12-20T17:01:07.234261 #11392] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."team1_id" = 17) AND ("games"."team2_id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.236107 #11392] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) AND ("teamnames"."name" = 'Chicago Bears') LIMIT 1[0m
+D, [2010-12-20T17:01:07.236802 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) AND ("teamnames"."name" = 'New York Yankees') LIMIT 1
+D, [2010-12-20T17:01:07.237343 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1[0m
+D, [2010-12-20T17:01:07.237862 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1
+D, [2010-12-20T17:01:07.238491 #11392] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."team1_id" = 19) AND ("games"."team2_id" = 20) LIMIT 1[0m
+D, [2010-12-20T17:01:07.240255 #11392] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 4) AND ("teamnames"."name" = 'Lakers') LIMIT 1
+D, [2010-12-20T17:01:07.240832 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 4) AND ("teamnames"."name" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2010-12-20T17:01:07.241363 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.241908 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1[0m
+D, [2010-12-20T17:01:07.242482 #11392] DEBUG -- :   [1m[35mGame Load (0.1ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."team1_id" = 17) AND ("games"."team2_id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.244279 #11392] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 4) AND ("teamnames"."name" = 'CH Bears') LIMIT 1[0m
+D, [2010-12-20T17:01:07.244862 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 4) AND ("teamnames"."name" = 'NY Yankees') LIMIT 1
+D, [2010-12-20T17:01:07.245448 #11392] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1[0m
+D, [2010-12-20T17:01:07.245982 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1
+D, [2010-12-20T17:01:07.246581 #11392] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."team1_id" = 19) AND ("games"."team2_id" = 20) LIMIT 1[0m
+D, [2010-12-20T17:01:07.247587 #11392] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"
+D, [2010-12-20T17:01:07.248129 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1[0m
+D, [2010-12-20T17:01:07.248583 #11392] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2010-12-20T17:01:07.250297 #11392] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "bookie_games" WHERE ("bookie_games".game_id = 7)[0m
+D, [2010-12-20T17:01:07.251092 #11392] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id = 7)
+D, [2010-12-20T17:01:07.252652 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.254522 #11392] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 13)
+D, [2010-12-20T17:01:07.255553 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:01:07.256129 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:01:07.256976 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:01:07.257539 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:01:07.258337 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.258939 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:01:07.259731 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:01:07.260629 #11392] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 15)
+D, [2010-12-20T17:01:07.261531 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:01:07.262102 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:01:07.262908 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:01:07.263520 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:01:07.264461 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.265095 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+I, [2010-12-20T17:01:07.265273 #11392]  INFO -- : LOS GEHTS
+D, [2010-12-20T17:01:07.267462 #11392] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2010-12-20T17:01:07.268581 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T17:01:07.270207 #11392] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2010-12-20T17:01:07.272363 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T17:01:07.273264 #11392]  INFO -- : ENDE
+D, [2010-12-20T17:01:07.273740 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2010-12-20T17:01:07.274309 #11392] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2010-12-20T17:01:07.275166 #11392] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "bookie_games" WHERE ("bookie_games".game_id = 8)[0m
+D, [2010-12-20T17:01:07.275906 #11392] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id = 8)
+D, [2010-12-20T17:01:07.276790 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.277682 #11392] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 14)
+D, [2010-12-20T17:01:07.278605 #11392] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:01:07.279349 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:01:07.280307 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:01:07.280930 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:01:07.282144 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.282836 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:01:07.283785 #11392] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:01:07.284892 #11392] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 16)
+D, [2010-12-20T17:01:07.285903 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:01:07.286542 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:01:07.287516 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:01:07.288248 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:01:07.289212 #11392] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:01:07.289777 #11392] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+I, [2010-12-20T17:01:07.289940 #11392]  INFO -- : LOS GEHTS
+D, [2010-12-20T17:01:07.291373 #11392] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2010-12-20T17:01:07.292429 #11392] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T17:01:07.293363 #11392] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2010-12-20T17:01:07.295563 #11392] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T17:01:07.296478 #11392]  INFO -- : ENDE
+D, [2010-12-20T17:01:07.297015 #11392] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2010-12-20T17:14:04.263035 #11572] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2010-12-20T17:14:04.263954 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2010-12-20T17:14:04.264564 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Bet365') LIMIT 1[0m
+D, [2010-12-20T17:14:04.266315 #11572] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'LA Lakers') AND ("bookie_games"."team2" = 'Pittsburgh') LIMIT 1
+D, [2010-12-20T17:14:04.266963 #11572] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Lakers') AND ("bookie_games"."team2" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2010-12-20T17:14:04.267587 #11572] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Chicago Bears') AND ("bookie_games"."team2" = 'New York Yankees') LIMIT 1
+D, [2010-12-20T17:14:04.268204 #11572] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'CH Bears') AND ("bookie_games"."team2" = 'NY Yankees') LIMIT 1[0m
+D, [2010-12-20T17:14:04.283293 #11572] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T17:14:04.284947 #11572] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T17:14:04.287608 #11572] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T17:14:04.288956 #11572] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T17:14:04.291615 #11572] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1
+D, [2010-12-20T17:14:04.292302 #11572] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'moneyline') LIMIT 1[0m
+D, [2010-12-20T17:14:04.292955 #11572] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1
+D, [2010-12-20T17:14:04.293586 #11572] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-20T17:14:04.294267 #11572] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'moneyline') LIMIT 1
+D, [2010-12-20T17:14:04.294913 #11572] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-20T17:14:04.295539 #11572] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-20T17:14:04.296156 #11572] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Sieg') LIMIT 1[0m
+D, [2010-12-20T17:14:04.296790 #11572] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1
+D, [2010-12-20T17:14:04.297415 #11572] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-20T17:14:04.298040 #11572] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Sieg') LIMIT 1
+D, [2010-12-20T17:14:04.298658 #11572] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-20T17:14:04.304624 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'over/under 2.5') LIMIT 1
+D, [2010-12-20T17:14:04.306044 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.307324 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:14:04.312687 #11572] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'moneyline') LIMIT 1[0m
+D, [2010-12-20T17:14:04.313317 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2010-12-20T17:14:04.313870 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:14:04.315623 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'handicap -1.5') LIMIT 1
+D, [2010-12-20T17:14:04.316180 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.316727 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:14:04.318417 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-20T17:14:04.318978 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2010-12-20T17:14:04.319524 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:14:04.321201 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'moneyline') LIMIT 1
+D, [2010-12-20T17:14:04.321745 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.322275 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:14:04.323896 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-20T17:14:04.324470 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2010-12-20T17:14:04.325013 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.326696 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-20T17:14:04.327266 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:14:04.327822 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:14:04.329517 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Sieg') LIMIT 1[0m
+D, [2010-12-20T17:14:04.330062 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2010-12-20T17:14:04.330606 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:14:04.332237 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Handi 1,5') LIMIT 1
+D, [2010-12-20T17:14:04.332793 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:14:04.333352 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:14:04.370789 #11572] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-20T17:14:04.371463 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2010-12-20T17:14:04.372037 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:14:04.373868 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Sieg') LIMIT 1
+D, [2010-12-20T17:14:04.374550 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:14:04.375172 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:14:04.376993 #11572] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."name" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-20T17:14:04.377582 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2010-12-20T17:14:04.378145 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.387105 #11572] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"
+D, [2010-12-20T17:14:04.388432 #11572] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1[0m
+D, [2010-12-20T17:14:04.391907 #11572] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2010-12-20T17:14:04.393681 #11572] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "bookie_games" WHERE ("bookie_games".game_id = 7)[0m
+D, [2010-12-20T17:14:04.394591 #11572] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id = 7)
+D, [2010-12-20T17:14:04.396213 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.397992 #11572] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 13)
+D, [2010-12-20T17:14:04.398977 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:14:04.399584 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:14:04.400408 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:14:04.401008 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:14:04.401833 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.402402 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:14:04.403209 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:14:04.404306 #11572] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 15)
+D, [2010-12-20T17:14:04.405353 #11572] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:14:04.406097 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:14:04.407056 #11572] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:14:04.407712 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:14:04.408661 #11572] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.409378 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+I, [2010-12-20T17:14:04.409603 #11572]  INFO -- : LOS GEHTS
+D, [2010-12-20T17:14:04.411983 #11572] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2010-12-20T17:14:04.413173 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T17:14:04.414979 #11572] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2010-12-20T17:14:04.417239 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T17:14:04.418197 #11572]  INFO -- : ENDE
+D, [2010-12-20T17:14:04.418769 #11572] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2010-12-20T17:14:04.419323 #11572] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2010-12-20T17:14:04.420202 #11572] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "bookie_games" WHERE ("bookie_games".game_id = 8)[0m
+D, [2010-12-20T17:14:04.421132 #11572] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id = 8)
+D, [2010-12-20T17:14:04.422176 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.423215 #11572] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 14)
+D, [2010-12-20T17:14:04.424343 #11572] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:14:04.425035 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:14:04.426078 #11572] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:14:04.426748 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:14:04.427588 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.428143 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:14:04.428945 #11572] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:14:04.429887 #11572] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 16)
+D, [2010-12-20T17:14:04.430782 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:14:04.431351 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:14:04.432137 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:14:04.432708 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:14:04.433499 #11572] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:14:04.434054 #11572] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+I, [2010-12-20T17:14:04.434286 #11572]  INFO -- : LOS GEHTS
+D, [2010-12-20T17:14:04.435750 #11572] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2010-12-20T17:14:04.436884 #11572] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T17:14:04.437855 #11572] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2010-12-20T17:14:04.440018 #11572] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T17:14:04.440924 #11572]  INFO -- : ENDE
+D, [2010-12-20T17:14:04.441409 #11572] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2010-12-20T17:16:34.264541 #11624] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2010-12-20T17:16:34.265432 #11624] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2010-12-20T17:16:34.265991 #11624] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Bet365') LIMIT 1[0m
+D, [2010-12-20T17:16:34.267835 #11624] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'LA Lakers') AND ("bookie_games"."team2" = 'Pittsburgh') LIMIT 1
+D, [2010-12-20T17:16:34.268476 #11624] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Lakers') AND ("bookie_games"."team2" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2010-12-20T17:16:34.269077 #11624] DEBUG -- :   [1m[35mBookieGame Load (0.1ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Chicago Bears') AND ("bookie_games"."team2" = 'New York Yankees') LIMIT 1
+D, [2010-12-20T17:16:34.269677 #11624] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'CH Bears') AND ("bookie_games"."team2" = 'NY Yankees') LIMIT 1[0m
+D, [2010-12-20T17:16:34.284650 #11624] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T17:16:34.286271 #11624] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T17:16:34.288981 #11624] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T17:16:34.290346 #11624] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T17:16:34.292967 #11624] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1
+D, [2010-12-20T17:16:34.293627 #11624] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'moneyline') LIMIT 1[0m
+D, [2010-12-20T17:16:34.294241 #11624] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1
+D, [2010-12-20T17:16:34.294863 #11624] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-20T17:16:34.295466 #11624] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'moneyline') LIMIT 1
+D, [2010-12-20T17:16:34.296083 #11624] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-20T17:16:34.296724 #11624] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-20T17:16:34.297335 #11624] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Sieg') LIMIT 1[0m
+D, [2010-12-20T17:16:34.297943 #11624] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1
+D, [2010-12-20T17:16:34.298593 #11624] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-20T17:16:34.299213 #11624] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Sieg') LIMIT 1
+D, [2010-12-20T17:16:34.299843 #11624] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-20T17:16:34.306282 #11624] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:16:34.308069 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:16:34.309650 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:16:34.311158 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:16:34.312628 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:16:34.314094 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:16:34.315574 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:16:34.317109 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:16:34.318627 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:16:34.320118 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:16:34.321586 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:16:34.323053 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:16:34.331781 #11624] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"
+D, [2010-12-20T17:16:34.333088 #11624] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1[0m
+D, [2010-12-20T17:16:34.336455 #11624] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2010-12-20T17:16:34.372516 #11624] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "bookie_games" WHERE ("bookie_games".game_id = 7)[0m
+D, [2010-12-20T17:16:34.373499 #11624] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id = 7)
+D, [2010-12-20T17:16:34.375269 #11624] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:16:34.377246 #11624] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 13)
+D, [2010-12-20T17:16:34.378294 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:16:34.382815 #11624] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:16:34.383808 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:16:34.384433 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:16:34.385240 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:16:34.385801 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:16:34.386695 #11624] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:16:34.387745 #11624] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 15)
+D, [2010-12-20T17:16:34.388635 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:16:34.389220 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:16:34.390012 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:16:34.390566 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:16:34.391429 #11624] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:16:34.392094 #11624] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+I, [2010-12-20T17:16:34.392280 #11624]  INFO -- : LOS GEHTS
+D, [2010-12-20T17:16:34.394826 #11624] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2010-12-20T17:16:34.396124 #11624] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T17:16:34.398150 #11624] DEBUG -- :   [1m[36mBookieGame Load (0.3ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2010-12-20T17:16:34.400575 #11624] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T17:16:34.401524 #11624]  INFO -- : ENDE
+D, [2010-12-20T17:16:34.402028 #11624] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2010-12-20T17:16:34.402524 #11624] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2010-12-20T17:16:34.403340 #11624] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "bookie_games" WHERE ("bookie_games".game_id = 8)[0m
+D, [2010-12-20T17:16:34.404117 #11624] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id = 8)
+D, [2010-12-20T17:16:34.404975 #11624] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:16:34.405859 #11624] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 14)
+D, [2010-12-20T17:16:34.406796 #11624] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:16:34.407389 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:16:34.408175 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:16:34.408750 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:16:34.409521 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:16:34.410062 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:16:34.410832 #11624] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:16:34.411733 #11624] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 16)
+D, [2010-12-20T17:16:34.412582 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:16:34.413131 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:16:34.413894 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:16:34.414459 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:16:34.415249 #11624] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:16:34.415791 #11624] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+I, [2010-12-20T17:16:34.415944 #11624]  INFO -- : LOS GEHTS
+D, [2010-12-20T17:16:34.417384 #11624] DEBUG -- :   [1m[36mOdd Load (0.3ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2010-12-20T17:16:34.418458 #11624] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T17:16:34.419393 #11624] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2010-12-20T17:16:34.421634 #11624] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T17:16:34.422598 #11624]  INFO -- : ENDE
+D, [2010-12-20T17:16:34.423196 #11624] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2010-12-20T17:19:04.184585 #11667] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2010-12-20T17:19:04.185469 #11667] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2010-12-20T17:19:04.186034 #11667] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Bet365') LIMIT 1[0m
+D, [2010-12-20T17:19:04.187840 #11667] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'LA Lakers') AND ("bookie_games"."team2" = 'Pittsburgh') LIMIT 1
+D, [2010-12-20T17:19:04.188463 #11667] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Lakers') AND ("bookie_games"."team2" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2010-12-20T17:19:04.189057 #11667] DEBUG -- :   [1m[35mBookieGame Load (0.1ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Chicago Bears') AND ("bookie_games"."team2" = 'New York Yankees') LIMIT 1
+D, [2010-12-20T17:19:04.189692 #11667] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'CH Bears') AND ("bookie_games"."team2" = 'NY Yankees') LIMIT 1[0m
+D, [2010-12-20T17:19:04.204570 #11667] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T17:19:04.206195 #11667] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T17:19:04.208831 #11667] DEBUG -- :   [1m[35mGame Load (0.1ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T17:19:04.210164 #11667] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T17:19:04.212763 #11667] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1
+D, [2010-12-20T17:19:04.213435 #11667] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'moneyline') LIMIT 1[0m
+D, [2010-12-20T17:19:04.214043 #11667] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1
+D, [2010-12-20T17:19:04.214672 #11667] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-20T17:19:04.215281 #11667] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'moneyline') LIMIT 1
+D, [2010-12-20T17:19:04.215901 #11667] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-20T17:19:04.216516 #11667] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-20T17:19:04.217156 #11667] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Sieg') LIMIT 1[0m
+D, [2010-12-20T17:19:04.217769 #11667] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1
+D, [2010-12-20T17:19:04.218382 #11667] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-20T17:19:04.218996 #11667] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Sieg') LIMIT 1
+D, [2010-12-20T17:19:04.219607 #11667] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-20T17:19:04.226017 #11667] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:19:04.227855 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:19:04.229360 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:19:04.230864 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:19:04.232346 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:19:04.233847 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:19:04.235340 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:19:04.236858 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:19:04.238349 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:19:04.239869 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:19:04.241385 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:19:04.242876 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:19:04.251441 #11667] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"
+D, [2010-12-20T17:19:04.252735 #11667] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1[0m
+D, [2010-12-20T17:19:04.256052 #11667] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2010-12-20T17:19:04.292577 #11667] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "bookie_games" WHERE ("bookie_games".game_id = 7)[0m
+D, [2010-12-20T17:19:04.293506 #11667] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id = 7)
+D, [2010-12-20T17:19:04.295246 #11667] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:19:04.297254 #11667] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 13)
+D, [2010-12-20T17:19:04.298329 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:19:04.302812 #11667] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:19:04.303810 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:19:04.304409 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:19:04.305253 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:19:04.305836 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:19:04.306740 #11667] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:19:04.307780 #11667] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 15)
+D, [2010-12-20T17:19:04.308688 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:19:04.309258 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:19:04.310064 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:19:04.310626 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:19:04.311575 #11667] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:19:04.312242 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+I, [2010-12-20T17:19:04.312429 #11667]  INFO -- : LOS GEHTS
+D, [2010-12-20T17:19:04.314932 #11667] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2010-12-20T17:19:04.316233 #11667] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T17:19:04.318270 #11667] DEBUG -- :   [1m[36mBookieGame Load (0.3ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2010-12-20T17:19:04.320651 #11667] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T17:19:04.321588 #11667]  INFO -- : ENDE
+D, [2010-12-20T17:19:04.322092 #11667] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2010-12-20T17:19:04.322560 #11667] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2010-12-20T17:19:04.323376 #11667] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "bookie_games" WHERE ("bookie_games".game_id = 8)[0m
+D, [2010-12-20T17:19:04.324156 #11667] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id = 8)
+D, [2010-12-20T17:19:04.325026 #11667] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:19:04.325964 #11667] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 14)
+D, [2010-12-20T17:19:04.326981 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:19:04.327569 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:19:04.328368 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:19:04.328931 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:19:04.329716 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:19:04.330268 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T17:19:04.331050 #11667] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2010-12-20T17:19:04.331935 #11667] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id = 16)
+D, [2010-12-20T17:19:04.332815 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T17:19:04.333385 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T17:19:04.334185 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T17:19:04.334800 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T17:19:04.335599 #11667] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T17:19:04.336154 #11667] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+I, [2010-12-20T17:19:04.336309 #11667]  INFO -- : LOS GEHTS
+D, [2010-12-20T17:19:04.337746 #11667] DEBUG -- :   [1m[36mOdd Load (0.3ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2010-12-20T17:19:04.338823 #11667] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T17:19:04.339770 #11667] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2010-12-20T17:19:04.342026 #11667] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T17:19:04.342970 #11667]  INFO -- : ENDE
+D, [2010-12-20T17:19:04.343607 #11667] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2010-12-20T18:26:25.461909 #15521] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2010-12-20T18:26:25.463289 #15521] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2010-12-20T18:26:25.464173 #15521] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Bet365') LIMIT 1[0m
+D, [2010-12-20T18:26:25.466758 #15521] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'LA Lakers') AND ("bookie_games"."team2" = 'Pittsburgh') LIMIT 1
+D, [2010-12-20T18:26:25.467677 #15521] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Lakers') AND ("bookie_games"."team2" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2010-12-20T18:26:25.468559 #15521] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Chicago Bears') AND ("bookie_games"."team2" = 'New York Yankees') LIMIT 1
+D, [2010-12-20T18:26:25.469488 #15521] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'CH Bears') AND ("bookie_games"."team2" = 'NY Yankees') LIMIT 1[0m
+D, [2010-12-20T18:26:25.491726 #15521] DEBUG -- :   [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T18:26:25.494229 #15521] DEBUG -- :   [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T18:26:25.497995 #15521] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T18:26:25.499978 #15521] DEBUG -- :   [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T18:26:25.503994 #15521] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1
+D, [2010-12-20T18:26:25.505031 #15521] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'moneyline') LIMIT 1[0m
+D, [2010-12-20T18:26:25.505933 #15521] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1
+D, [2010-12-20T18:26:25.506887 #15521] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-20T18:26:25.507799 #15521] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'moneyline') LIMIT 1
+D, [2010-12-20T18:26:25.508756 #15521] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-20T18:26:25.509675 #15521] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-20T18:26:25.510570 #15521] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Sieg') LIMIT 1[0m
+D, [2010-12-20T18:26:25.511526 #15521] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1
+D, [2010-12-20T18:26:25.512445 #15521] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-20T18:26:25.513383 #15521] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Sieg') LIMIT 1
+D, [2010-12-20T18:26:25.514365 #15521] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-20T18:26:25.524069 #15521] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T18:26:25.526778 #15521] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T18:26:25.529143 #15521] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T18:26:25.531395 #15521] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T18:26:25.533747 #15521] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T18:26:25.536077 #15521] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T18:26:25.538312 #15521] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T18:26:25.540575 #15521] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T18:26:25.542872 #15521] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T18:26:25.545257 #15521] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T18:26:25.547573 #15521] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T18:26:25.549794 #15521] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T18:26:25.562690 #15521] DEBUG -- :   [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games"
+D, [2010-12-20T18:28:14.870338 #15607] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2010-12-20T18:28:14.871734 #15607] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2010-12-20T18:28:14.872590 #15607] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Bet365') LIMIT 1[0m
+D, [2010-12-20T18:28:14.875262 #15607] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'LA Lakers') AND ("bookie_games"."team2" = 'Pittsburgh') LIMIT 1
+D, [2010-12-20T18:28:14.876205 #15607] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Lakers') AND ("bookie_games"."team2" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2010-12-20T18:28:14.877108 #15607] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Chicago Bears') AND ("bookie_games"."team2" = 'New York Yankees') LIMIT 1
+D, [2010-12-20T18:28:14.877987 #15607] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'CH Bears') AND ("bookie_games"."team2" = 'NY Yankees') LIMIT 1[0m
+D, [2010-12-20T18:28:14.900007 #15607] DEBUG -- :   [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T18:28:14.902520 #15607] DEBUG -- :   [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T18:28:14.906545 #15607] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-20T18:28:14.908640 #15607] DEBUG -- :   [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-20T18:28:14.912531 #15607] DEBUG -- :   [1m[35mOdd Load (0.3ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1
+D, [2010-12-20T18:28:14.913568 #15607] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'moneyline') LIMIT 1[0m
+D, [2010-12-20T18:28:14.914550 #15607] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1
+D, [2010-12-20T18:28:14.915482 #15607] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-20T18:28:14.916416 #15607] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'moneyline') LIMIT 1
+D, [2010-12-20T18:28:14.917340 #15607] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-20T18:28:14.918278 #15607] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-20T18:28:14.919206 #15607] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Sieg') LIMIT 1[0m
+D, [2010-12-20T18:28:14.920099 #15607] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1
+D, [2010-12-20T18:28:14.920999 #15607] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-20T18:28:14.921923 #15607] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Sieg') LIMIT 1
+D, [2010-12-20T18:28:14.922910 #15607] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-20T18:28:14.932383 #15607] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T18:28:14.935071 #15607] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T18:28:14.937273 #15607] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T18:28:14.939431 #15607] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T18:28:14.941663 #15607] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T18:28:14.944018 #15607] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T18:28:14.946275 #15607] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-20T18:28:14.948467 #15607] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-20T18:28:14.950661 #15607] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-20T18:28:14.952879 #15607] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T18:28:14.955271 #15607] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T18:28:14.957518 #15607] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T18:28:14.970542 #15607] DEBUG -- :   [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games"
+D, [2010-12-20T18:28:14.974308 #15607] DEBUG -- :   [1m[36mBookieGame Load (0.5ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id IN (7,8))[0m
+D, [2010-12-20T18:28:15.030839 #15607] DEBUG -- :   [1m[35mOdd Load (1.0ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id IN (13,15,14,16))
+D, [2010-12-20T18:28:15.037177 #15607] DEBUG -- :   [1m[36mBetname Load (0.4ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))[0m
+D, [2010-12-20T18:28:15.039699 #15607] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2010-12-20T18:28:15.045069 #15607] DEBUG -- :   [1m[36mTeamname Load (0.3ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1[0m
+D, [2010-12-20T18:28:15.047704 #15607] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2010-12-20T18:28:15.054565 #15607] DEBUG -- :   [1m[36mBetname Load (0.3ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-20T18:28:15.056195 #15607] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-20T18:28:15.057430 #15607] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T18:28:15.058709 #15607] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2010-12-20T18:28:15.060069 #15607]  INFO -- : LOS GEHTS
+D, [2010-12-20T18:28:15.063204 #15607] DEBUG -- :   [1m[36mOdd Load (0.6ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2010-12-20T18:28:15.065053 #15607] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T18:28:15.067719 #15607] DEBUG -- :   [1m[36mBookieGame Load (0.3ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2010-12-20T18:28:15.071350 #15607] DEBUG -- :   [1m[35mBookmaker Load (0.4ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T18:28:15.072908 #15607]  INFO -- : ENDE
+D, [2010-12-20T18:28:15.074031 #15607] DEBUG -- :   [1m[36mTeamname Load (0.3ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2010-12-20T18:28:15.074839 #15607] DEBUG -- :   [1m[35mTeamname Load (0.2ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2010-12-20T18:28:15.076226 #15607] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-20T18:28:15.078549 #15607] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2010-12-20T18:28:15.079827 #15607]  INFO -- : LOS GEHTS
+D, [2010-12-20T18:28:15.081877 #15607] DEBUG -- :   [1m[36mOdd Load (0.5ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2010-12-20T18:28:15.083495 #15607] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-20T18:28:15.085022 #15607] DEBUG -- :   [1m[36mBookieGame Load (0.3ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2010-12-20T18:28:15.088178 #15607] DEBUG -- :   [1m[35mBookmaker Load (0.3ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-20T18:28:15.089508 #15607]  INFO -- : ENDE
+D, [2010-12-20T18:28:15.090210 #15607] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2010-12-24T12:56:58.027505 #3073] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2010-12-24T12:56:58.055989 #3073] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2010-12-24T12:56:58.056610 #3073] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Bet365') LIMIT 1[0m
+D, [2010-12-24T12:56:58.058447 #3073] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team2" = 'Pittsburgh') AND ("bookie_games"."team1" = 'LA Lakers') LIMIT 1
+D, [2010-12-24T12:56:58.059082 #3073] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team2" = 'Pittsburgh Pirates') AND ("bookie_games"."team1" = 'Lakers') LIMIT 1[0m
+D, [2010-12-24T12:56:58.059667 #3073] DEBUG -- :   [1m[35mBookieGame Load (0.1ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team2" = 'New York Yankees') AND ("bookie_games"."team1" = 'Chicago Bears') LIMIT 1
+D, [2010-12-24T12:56:58.060254 #3073] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team2" = 'NY Yankees') AND ("bookie_games"."team1" = 'CH Bears') LIMIT 1[0m
+D, [2010-12-24T12:56:58.107132 #3073] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-24T12:56:58.108747 #3073] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-24T12:56:58.138592 #3073] DEBUG -- :   [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2010-12-24T12:56:58.141257 #3073] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2010-12-24T12:56:58.143914 #3073] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1
+D, [2010-12-24T12:56:58.144571 #3073] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'moneyline') LIMIT 1[0m
+D, [2010-12-24T12:56:58.145173 #3073] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1
+D, [2010-12-24T12:56:58.145776 #3073] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1[0m
+D, [2010-12-24T12:56:58.146369 #3073] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'moneyline') LIMIT 1
+D, [2010-12-24T12:56:58.146979 #3073] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1[0m
+D, [2010-12-24T12:56:58.147583 #3073] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1
+D, [2010-12-24T12:56:58.148178 #3073] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Sieg') LIMIT 1[0m
+D, [2010-12-24T12:56:58.148777 #3073] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1
+D, [2010-12-24T12:56:58.149371 #3073] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2010-12-24T12:56:58.149978 #3073] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Sieg') LIMIT 1
+D, [2010-12-24T12:56:58.150637 #3073] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1[0m
+D, [2010-12-24T12:56:58.157033 #3073] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-24T12:56:58.158774 #3073] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-24T12:56:58.160348 #3073] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-24T12:56:58.161923 #3073] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-24T12:56:58.163414 #3073] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-24T12:56:58.164891 #3073] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-24T12:56:58.166415 #3073] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2010-12-24T12:56:58.167896 #3073] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2010-12-24T12:56:58.169407 #3073] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2010-12-24T12:56:58.170969 #3073] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-24T12:56:58.172445 #3073] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-24T12:56:58.173937 #3073] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-24T12:57:02.383654 #3074] DEBUG -- :   [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games"[0m
+D, [2010-12-24T12:57:02.395289 #3074] DEBUG -- :   [1m[35mBookieGame Load (0.4ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id IN (7,8))
+D, [2010-12-24T12:57:02.403244 #3074] DEBUG -- :   [1m[36mOdd Load (0.7ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id IN (13,15,14,16))[0m
+D, [2010-12-24T12:57:02.412611 #3074] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-24T12:57:02.413801 #3074] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2010-12-24T12:57:02.414558 #3074] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2010-12-24T12:57:02.417920 #3074] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1[0m
+D, [2010-12-24T12:57:02.420265 #3074] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2010-12-24T12:57:02.427081 #3074] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2010-12-24T12:57:02.428087 #3074] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2010-12-24T12:57:02.428899 #3074] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2010-12-24T12:57:02.429720 #3074] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2010-12-24T12:57:02.430630 #3074]  INFO -- : LOS GEHTS
+D, [2010-12-24T12:57:02.432781 #3074] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2010-12-24T12:57:02.434093 #3074] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-24T12:57:02.436070 #3074] DEBUG -- :   [1m[36mBookieGame Load (0.3ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2010-12-24T12:57:02.438445 #3074] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-24T12:57:02.439483 #3074]  INFO -- : ENDE
+D, [2010-12-24T12:57:02.440106 #3074] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2010-12-24T12:57:02.440584 #3074] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2010-12-24T12:57:02.441432 #3074] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2010-12-24T12:57:02.442980 #3074] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2010-12-24T12:57:02.443919 #3074]  INFO -- : LOS GEHTS
+D, [2010-12-24T12:57:02.445308 #3074] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2010-12-24T12:57:02.446386 #3074] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2010-12-24T12:57:02.447349 #3074] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2010-12-24T12:57:02.449624 #3074] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2010-12-24T12:57:02.450593 #3074]  INFO -- : ENDE
+D, [2010-12-24T12:57:02.451756 #3074] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2011-01-07T11:09:29.295035 #4048] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T11:09:29.324359 #4048] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2011-01-07T11:09:29.324896 #4048] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Bet365') LIMIT 1[0m
+D, [2011-01-07T11:09:29.326697 #4048] DEBUG -- :   [1m[35mBookieGame Load (0.2ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'LA Lakers') AND ("bookie_games"."team2" = 'Pittsburgh') LIMIT 1
+D, [2011-01-07T11:09:29.327220 #4048] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Lakers') AND ("bookie_games"."team2" = 'Pittsburgh Pirates') LIMIT 1[0m
+D, [2011-01-07T11:09:29.327707 #4048] DEBUG -- :   [1m[35mBookieGame Load (0.1ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'Chicago Bears') AND ("bookie_games"."team2" = 'New York Yankees') LIMIT 1
+D, [2011-01-07T11:09:29.328183 #4048] DEBUG -- :   [1m[36mBookieGame Load (0.1ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."team1" = 'CH Bears') AND ("bookie_games"."team2" = 'NY Yankees') LIMIT 1[0m
+D, [2011-01-07T11:09:29.374444 #4048] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2011-01-07T11:09:29.375860 #4048] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2011-01-07T11:09:29.378430 #4048] DEBUG -- :   [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE ("games"."id" = 7) LIMIT 1
+D, [2011-01-07T11:09:29.379458 #4048] DEBUG -- :   [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE ("games"."id" = 8) LIMIT 1[0m
+D, [2011-01-07T11:09:29.382255 #4048] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1
+D, [2011-01-07T11:09:29.382816 #4048] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'moneyline') LIMIT 1[0m
+D, [2011-01-07T11:09:29.383276 #4048] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 13) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1
+D, [2011-01-07T11:09:29.383729 #4048] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'over/under 2.5') LIMIT 1[0m
+D, [2011-01-07T11:09:29.384185 #4048] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'moneyline') LIMIT 1
+D, [2011-01-07T11:09:29.384645 #4048] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 14) AND ("odds"."betname" = 'handicap -1.5') LIMIT 1[0m
+D, [2011-01-07T11:09:29.410895 #4048] DEBUG -- :   [1m[35mOdd Load (0.5ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1
+D, [2011-01-07T11:09:29.422531 #4048] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Sieg') LIMIT 1[0m
+D, [2011-01-07T11:09:29.423031 #4048] DEBUG -- :   [1m[35mOdd Load (0.1ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 15) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1
+D, [2011-01-07T11:09:29.423505 #4048] DEBUG -- :   [1m[36mOdd Load (0.2ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Über/Unter 2,5') LIMIT 1[0m
+D, [2011-01-07T11:09:29.423986 #4048] DEBUG -- :   [1m[35mOdd Load (0.2ms)[0m  SELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Sieg') LIMIT 1
+D, [2011-01-07T11:09:29.424452 #4048] DEBUG -- :   [1m[36mOdd Load (0.1ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds"."bookie_game_id" = 16) AND ("odds"."betname" = 'Handi 1,5') LIMIT 1[0m
+D, [2011-01-07T11:09:29.447393 #4048] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2011-01-07T11:09:29.449318 #4048] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2011-01-07T11:09:29.450752 #4048] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2011-01-07T11:09:29.452121 #4048] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2011-01-07T11:09:29.453454 #4048] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2011-01-07T11:09:29.454800 #4048] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T11:09:29.456143 #4048] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1
+D, [2011-01-07T11:09:29.457478 #4048] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1[0m
+D, [2011-01-07T11:09:29.458793 #4048] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1
+D, [2011-01-07T11:09:29.460141 #4048] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2011-01-07T11:09:29.461440 #4048] DEBUG -- :   [1m[35mBetname Load (0.1ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2011-01-07T11:09:29.462790 #4048] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T11:09:47.974031 #4052] DEBUG -- :   [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games"[0m
+D, [2011-01-07T11:09:47.993734 #4052] DEBUG -- :   [1m[35mBookieGame Load (0.4ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id IN (7,8))
+D, [2011-01-07T11:09:48.005460 #4052] DEBUG -- :   [1m[36mOdd Load (0.7ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id IN (13,15,14,16))[0m
+D, [2011-01-07T11:09:48.017966 #4052] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T11:09:48.019109 #4052] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T11:09:48.019890 #4052] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2011-01-07T11:09:48.038505 #4052] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1[0m
+D, [2011-01-07T11:09:48.041978 #4052] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T11:09:48.052375 #4052] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2011-01-07T11:09:48.053128 #4052] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2011-01-07T11:09:48.053633 #4052] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T11:09:48.054233 #4052] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T11:09:48.054617 #4052]  INFO -- : LOS GEHTS
+D, [2011-01-07T11:09:48.057625 #4052] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2011-01-07T11:09:48.058559 #4052] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T11:09:48.061332 #4052] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2011-01-07T11:09:48.063134 #4052] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T11:09:48.063864 #4052]  INFO -- : ENDE
+D, [2011-01-07T11:09:48.064285 #4052] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2011-01-07T11:09:48.064666 #4052] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2011-01-07T11:09:48.065158 #4052] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T11:09:48.065777 #4052] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T11:09:48.066054 #4052]  INFO -- : LOS GEHTS
+D, [2011-01-07T11:09:48.067079 #4052] DEBUG -- :   [1m[36mOdd Load (0.3ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2011-01-07T11:09:48.067905 #4052] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T11:09:48.068589 #4052] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2011-01-07T11:09:48.070191 #4052] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T11:09:48.070870 #4052]  INFO -- : ENDE
+D, [2011-01-07T11:09:48.073307 #4052] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2011-01-07T14:25:43.418627 #9789] DEBUG -- :   [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games"[0m
+D, [2011-01-07T14:25:43.438577 #9789] DEBUG -- :   [1m[35mBookieGame Load (0.4ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id IN (7,8))
+D, [2011-01-07T14:25:43.450062 #9789] DEBUG -- :   [1m[36mOdd Load (0.6ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id IN (13,15,14,16))[0m
+D, [2011-01-07T14:25:43.462038 #9789] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:25:43.463120 #9789] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:25:43.463833 #9789] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2011-01-07T14:25:43.481638 #9789] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1[0m
+D, [2011-01-07T14:25:43.485022 #9789] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:25:43.495349 #9789] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2011-01-07T14:25:43.496086 #9789] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2011-01-07T14:25:43.496576 #9789] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:25:43.497082 #9789] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T14:25:43.497435 #9789]  INFO -- : LOS GEHTS
+D, [2011-01-07T14:25:43.500379 #9789] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2011-01-07T14:25:43.501312 #9789] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:25:43.504057 #9789] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2011-01-07T14:25:43.505794 #9789] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T14:25:43.506549 #9789]  INFO -- : ENDE
+D, [2011-01-07T14:25:43.506968 #9789] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2011-01-07T14:25:43.507343 #9789] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2011-01-07T14:25:43.507835 #9789] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:25:43.508463 #9789] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T14:25:43.508741 #9789]  INFO -- : LOS GEHTS
+D, [2011-01-07T14:25:43.509756 #9789] DEBUG -- :   [1m[36mOdd Load (0.3ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2011-01-07T14:25:43.510588 #9789] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:25:43.511290 #9789] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2011-01-07T14:25:43.512896 #9789] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T14:25:43.513571 #9789]  INFO -- : ENDE
+D, [2011-01-07T14:25:43.515937 #9789] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2011-01-07T14:35:54.476038 #10070] DEBUG -- :   [1m[36mGame Load (0.7ms)[0m  [1mSELECT "games".* FROM "games"[0m
+D, [2011-01-07T14:35:54.496029 #10070] DEBUG -- :   [1m[35mBookieGame Load (0.4ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id IN (7,8))
+D, [2011-01-07T14:35:54.507394 #10070] DEBUG -- :   [1m[36mOdd Load (0.6ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id IN (13,15,14,16))[0m
+D, [2011-01-07T14:35:54.519791 #10070] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:35:54.520887 #10070] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:35:54.521641 #10070] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2011-01-07T14:35:54.540379 #10070] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1[0m
+D, [2011-01-07T14:35:54.543874 #10070] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:35:54.554383 #10070] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2011-01-07T14:35:54.555299 #10070] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2011-01-07T14:35:54.555948 #10070] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:35:54.556555 #10070] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T14:35:54.556969 #10070]  INFO -- : LOS GEHTS
+D, [2011-01-07T14:35:54.560358 #10070] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2011-01-07T14:35:54.561333 #10070] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:35:54.564194 #10070] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2011-01-07T14:35:54.566009 #10070] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T14:35:54.566776 #10070]  INFO -- : ENDE
+D, [2011-01-07T14:35:54.567201 #10070] DEBUG -- :   [1m[36mTeamname Load (0.1ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2011-01-07T14:35:54.567587 #10070] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2011-01-07T14:35:54.568114 #10070] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:35:54.568765 #10070] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T14:35:54.569053 #10070]  INFO -- : LOS GEHTS
+D, [2011-01-07T14:35:54.570109 #10070] DEBUG -- :   [1m[36mOdd Load (0.3ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2011-01-07T14:35:54.570954 #10070] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:35:54.571635 #10070] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2011-01-07T14:35:54.573237 #10070] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T14:35:54.574065 #10070]  INFO -- : ENDE
+D, [2011-01-07T14:35:54.576567 #10070] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2011-01-07T14:40:26.792250 #10186] DEBUG -- :   [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games"[0m
+D, [2011-01-07T14:40:26.811974 #10186] DEBUG -- :   [1m[35mBookieGame Load (0.4ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id IN (7,8))
+D, [2011-01-07T14:40:26.823841 #10186] DEBUG -- :   [1m[36mOdd Load (0.7ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id IN (13,15,14,16))[0m
+D, [2011-01-07T14:40:26.835878 #10186] DEBUG -- :   [1m[35mBetname Load (0.3ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:40:26.836982 #10186] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:40:26.837713 #10186] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2011-01-07T14:40:26.855909 #10186] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1[0m
+D, [2011-01-07T14:40:26.859692 #10186] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:40:26.870440 #10186] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2011-01-07T14:40:26.871236 #10186] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2011-01-07T14:40:26.871771 #10186] DEBUG -- :   [1m[36mBetname Load (0.1ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:40:26.872334 #10186] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T14:40:26.872726 #10186]  INFO -- : LOS GEHTS
+D, [2011-01-07T14:40:26.876034 #10186] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2011-01-07T14:40:26.877126 #10186] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:40:26.879961 #10186] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2011-01-07T14:40:26.881710 #10186] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T14:40:26.884643 #10186]  INFO -- : ENDE
+D, [2011-01-07T14:40:26.885105 #10186] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2011-01-07T14:40:26.885523 #10186] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2011-01-07T14:40:26.886055 #10186] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:40:26.886705 #10186] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T14:40:26.886987 #10186]  INFO -- : LOS GEHTS
+D, [2011-01-07T14:40:26.888037 #10186] DEBUG -- :   [1m[36mOdd Load (0.3ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2011-01-07T14:40:26.888948 #10186] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:40:26.889667 #10186] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2011-01-07T14:40:26.891299 #10186] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T14:40:26.894121 #10186]  INFO -- : ENDE
+D, [2011-01-07T14:40:26.896607 #10186] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2011-01-07T14:40:34.735525 #10189] DEBUG -- :   [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games"[0m
+D, [2011-01-07T14:40:34.755449 #10189] DEBUG -- :   [1m[35mBookieGame Load (0.4ms)[0m  SELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games".game_id IN (7,8))
+D, [2011-01-07T14:40:34.766730 #10189] DEBUG -- :   [1m[36mOdd Load (0.6ms)[0m  [1mSELECT "odds".* FROM "odds" WHERE ("odds".bookie_game_id IN (13,15,14,16))[0m
+D, [2011-01-07T14:40:34.778694 #10189] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:40:34.779767 #10189] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:40:34.780504 #10189] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2011-01-07T14:40:34.799671 #10189] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1[0m
+D, [2011-01-07T14:40:34.803253 #10189] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:40:34.813707 #10189] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 1) LIMIT 1[0m
+D, [2011-01-07T14:40:34.814525 #10189] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 2) LIMIT 1
+D, [2011-01-07T14:40:34.815143 #10189] DEBUG -- :   [1m[36mBetname Load (0.2ms)[0m  [1mSELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:40:34.815699 #10189] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T14:40:34.816073 #10189]  INFO -- : LOS GEHTS
+D, [2011-01-07T14:40:34.819203 #10189] DEBUG -- :   [1m[36mOdd Load (0.4ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 7))[0m
+D, [2011-01-07T14:40:34.820147 #10189] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:40:34.822938 #10189] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (13,15))[0m
+D, [2011-01-07T14:40:34.825011 #10189] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T14:40:34.828126 #10189]  INFO -- : ENDE
+D, [2011-01-07T14:40:34.828719 #10189] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1[0m
+D, [2011-01-07T14:40:34.829115 #10189] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2011-01-07T14:40:34.829614 #10189] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:40:34.830283 #10189] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+I, [2011-01-07T14:40:34.830562 #10189]  INFO -- : LOS GEHTS
+D, [2011-01-07T14:40:34.831562 #10189] DEBUG -- :   [1m[36mOdd Load (0.3ms)[0m  [1mSELECT "odds".* FROM "odds" INNER JOIN "bookie_games" ON "odds".bookie_game_id = "bookie_games".id WHERE (("bookie_games".game_id = 8))[0m
+D, [2011-01-07T14:40:34.832431 #10189] DEBUG -- :   [1m[35mBetname Load (0.2ms)[0m  SELECT "betnames".* FROM "betnames" WHERE ("betnames"."id" IN (1,2,3))
+D, [2011-01-07T14:40:34.833117 #10189] DEBUG -- :   [1m[36mBookieGame Load (0.2ms)[0m  [1mSELECT "bookie_games".* FROM "bookie_games" WHERE ("bookie_games"."id" IN (14,16))[0m
+D, [2011-01-07T14:40:34.834897 #10189] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" IN (3,4))
+I, [2011-01-07T14:40:34.837808 #10189]  INFO -- : ENDE
+D, [2011-01-07T14:40:34.840270 #10189] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)[0m
+D, [2011-01-07T14:47:28.593052 #10249] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:47:28.594575 #10249] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:47:49.687564 #10256] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:47:49.688992 #10256] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:50:29.442726 #10292] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:50:29.444338 #10292] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:50:29.447940 #10292] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:51:12.979485 #10312] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:51:12.981098 #10312] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:51:12.984680 #10312] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:51:12.993458 #10312] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:51:12.994017 #10312] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:51:12.994456 #10312] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:51:12.994886 #10312] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:51:12.995301 #10312] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:51:12.995727 #10312] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:51:31.185324 #10320] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:51:31.186996 #10320] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:51:31.190650 #10320] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:51:31.199487 #10320] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:51:31.200052 #10320] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:51:31.200491 #10320] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:51:31.200922 #10320] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:51:31.201350 #10320] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:51:31.214496 #10320] DEBUG -- :   [1m[36mBookmaker Load (12.7ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:52:12.772629 #10329] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:52:12.774279 #10329] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:52:12.777955 #10329] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:52:12.786869 #10329] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:52:12.787474 #10329] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:52:12.787931 #10329] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:52:12.788382 #10329] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:52:12.788825 #10329] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:52:12.789274 #10329] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:52:55.157182 #10335] DEBUG -- :   [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:52:55.158979 #10335] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:52:55.162633 #10335] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:52:55.171435 #10335] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:52:55.172018 #10335] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:52:55.172454 #10335] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:52:55.172871 #10335] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:52:55.173330 #10335] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:52:55.173755 #10335] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:54:22.055446 #10347] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:54:22.056483 #10347] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2011-01-07T14:54:22.062191 #10347] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:54:39.513708 #10351] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:54:39.514659 #10351] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2011-01-07T14:54:39.520378 #10351] DEBUG -- :   [1m[36mTeamname Load (0.3ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3)[0m
+D, [2011-01-07T14:54:39.522863 #10351] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:54:39.527661 #10351] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:54:39.528204 #10351] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:54:39.528644 #10351] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:54:39.529264 #10351] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:54:39.529823 #10351] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:54:39.530276 #10351] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:54:39.530705 #10351] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:54:39.543304 #10351] DEBUG -- :   [1m[35mBookmaker Load (0.4ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:54:39.543997 #10351] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:54:39.544470 #10351] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:54:39.544977 #10351] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:55:10.789317 #10355] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:55:10.790218 #10355] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2011-01-07T14:55:10.796046 #10355] DEBUG -- :   [1m[36mTeamname Load (0.3ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3)[0m
+D, [2011-01-07T14:55:10.798556 #10355] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:55:10.816387 #10355] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:55:10.816956 #10355] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:55:10.817394 #10355] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:55:10.818034 #10355] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:55:10.818652 #10355] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:55:10.819118 #10355] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:55:10.819561 #10355] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:55:10.820065 #10355] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:55:10.820532 #10355] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:55:10.821022 #10355] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1
+D, [2011-01-07T14:55:10.821478 #10355] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T14:59:17.354772 #10371] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T14:59:17.355711 #10371] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2011-01-07T14:59:17.361389 #10371] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3)[0m
+D, [2011-01-07T14:59:17.363982 #10371] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:59:17.381165 #10371] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:59:17.381747 #10371] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T14:59:17.382179 #10371] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T14:59:17.382771 #10371] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T14:59:17.383324 #10371] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T15:03:31.143739 #10378] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T15:03:31.144660 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2011-01-07T15:03:31.150619 #10378] DEBUG -- :   [1m[36mTeamname Load (0.3ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3)[0m
+D, [2011-01-07T15:03:31.153098 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:03:31.158058 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T15:03:31.158606 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:03:31.159039 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T15:03:31.159665 #10378] DEBUG -- :   [1m[35mTeamname Load (0.3ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)
+D, [2011-01-07T15:03:31.160242 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T15:03:36.632885 #10378] DEBUG -- :   [1m[35mTeamname Load (18.5ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2011-01-07T15:03:36.645394 #10378] DEBUG -- :   [1m[36mAREL (0.4ms)[0m  [1mUPDATE "teamnames" SET "teamname_id" = 17, "updated_at" = '2011-01-07 15:03:36.635823' WHERE ("teamnames"."id" = 17)[0m
+D, [2011-01-07T15:03:36.678235 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:03:36.678773 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T15:03:40.877475 #10378] DEBUG -- :   [1m[35mTeamname Load (0.5ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2011-01-07T15:03:40.881324 #10378] DEBUG -- :   [1m[36mAREL (0.5ms)[0m  [1mUPDATE "teamnames" SET "teamname_id" = 18, "updated_at" = '2011-01-07 15:03:40.879324' WHERE ("teamnames"."id" = 18)[0m
+D, [2011-01-07T15:03:40.919237 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.4ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:03:40.920472 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.3ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T15:03:45.077310 #10378] DEBUG -- :   [1m[35mTeamname Load (0.5ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1
+D, [2011-01-07T15:03:45.080579 #10378] DEBUG -- :   [1m[36mAREL (0.4ms)[0m  [1mUPDATE "teamnames" SET "teamname_id" = 19, "updated_at" = '2011-01-07 15:03:45.078777' WHERE ("teamnames"."id" = 19)[0m
+D, [2011-01-07T15:03:45.115504 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:03:45.116076 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T15:04:31.347382 #10378] DEBUG -- :   [1m[35mTeamname Load (0.5ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 17) LIMIT 1
+D, [2011-01-07T15:04:31.350610 #10378] DEBUG -- :   [1m[36mAREL (0.4ms)[0m  [1mUPDATE "teamnames" SET "teamname_id" = 17, "updated_at" = '2011-01-07 15:04:31.348871' WHERE ("teamnames"."id" = 21)[0m
+D, [2011-01-07T15:04:31.379115 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.4ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:04:31.381454 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.3ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T15:04:38.197465 #10378] DEBUG -- :   [1m[35mTeamname Load (0.5ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 18) LIMIT 1
+D, [2011-01-07T15:04:38.200722 #10378] DEBUG -- :   [1m[36mAREL (0.4ms)[0m  [1mUPDATE "teamnames" SET "teamname_id" = 18, "updated_at" = '2011-01-07 15:04:38.198957' WHERE ("teamnames"."id" = 22)[0m
+D, [2011-01-07T15:04:38.222869 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.4ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:04:38.224218 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.3ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T15:04:41.307457 #10378] DEBUG -- :   [1m[35mTeamname Load (0.5ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 19) LIMIT 1
+D, [2011-01-07T15:04:41.310932 #10378] DEBUG -- :   [1m[36mAREL (0.5ms)[0m  [1mUPDATE "teamnames" SET "teamname_id" = 19, "updated_at" = '2011-01-07 15:04:41.309024' WHERE ("teamnames"."id" = 23)[0m
+D, [2011-01-07T15:04:41.336329 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:04:41.336883 #10378] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 4) LIMIT 1[0m
+D, [2011-01-07T15:04:46.484816 #10378] DEBUG -- :   [1m[35mTeamname Load (0.5ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."id" = 20) LIMIT 1
+D, [2011-01-07T15:04:46.494579 #10378] DEBUG -- :   [1m[36mAREL (5.3ms)[0m  [1mUPDATE "teamnames" SET "teamname_id" = 20, "updated_at" = '2011-01-07 15:04:46.487853' WHERE ("teamnames"."id" = 24)[0m
+D, [2011-01-07T15:04:46.507673 #10378] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:04:49.484530 #10394] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-01-07T15:04:49.485428 #10394] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."name" = 'Pinnacle') LIMIT 1
+D, [2011-01-07T15:04:49.491160 #10394] DEBUG -- :   [1m[36mTeamname Load (0.2ms)[0m  [1mSELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."bookmaker_id" = 3)[0m
+D, [2011-01-07T15:04:49.493636 #10394] DEBUG -- :   [1m[35mBookmaker Load (0.2ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:04:49.511714 #10394] DEBUG -- :   [1m[36mBookmaker Load (0.2ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T15:04:49.512306 #10394] DEBUG -- :   [1m[35mBookmaker Load (0.1ms)[0m  SELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1
+D, [2011-01-07T15:04:49.512735 #10394] DEBUG -- :   [1m[36mBookmaker Load (0.1ms)[0m  [1mSELECT "bookmakers".* FROM "bookmakers" WHERE ("bookmakers"."id" = 3) LIMIT 1[0m
+D, [2011-01-07T15:04:49.513201 #10394] DEBUG -- :   [1m[35mTeamname Load (0.1ms)[0m  SELECT "teamnames".* FROM "teamnames" WHERE ("teamnames"."teamname_id" IS NULL)

@@ -59,10 +59,6 @@
                 models/bookie_game.rb
                 </a>
         <br />
-                <a href="../files/db/migrations/20101211223018_bookie_game_rb.html">
-                db/migrations/20101211223018_bookie_game.rb
-                </a>
-        <br />
             </td>
         </tr>
 
@@ -82,6 +78,48 @@
 
   <div id="contextContent">
 
+    <div id="description">
+      <p>
+This class stores data of a sports game which belongs to a specific
+bookmaker
+</p>
+<p>
+Each time an instance is being made persistent, the mapping to a <a
+href="Game.html">Game</a> object is checked. If this mapping is not done
+already, it tries to do so!
+</p>
+<h3>Attributes</h3>
+<ul>
+<li>bookmaker
+
+</li>
+<li>game
+
+</li>
+<li>odds
+
+</li>
+<li>team1
+
+</li>
+<li>team2
+
+</li>
+<li>sport
+
+</li>
+<li>league
+
+</li>
+<li>created_at
+
+</li>
+<li>updated_at
+
+</li>
+</ul>
+
+    </div>
 
 
    </div>
@@ -90,8 +128,7 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000005">down</a>&nbsp;&nbsp;
-      <a href="#M000004">up</a>&nbsp;&nbsp;
+      <a href="#M000002">mapped?</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -111,55 +148,28 @@
 
     <!-- if method_list -->
     <div id="methods">
-      <h3 class="section-bar">Public Class methods</h3>
+      <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000005" class="method-detail">
-        <a name="M000005"></a>
+      <div id="method-M000002" class="method-detail">
+        <a name="M000002"></a>
 
         <div class="method-heading">
-          <a href="#M000005" class="method-signature">
-          <span class="method-name">down</span><span class="method-args">()</span>
+          <a href="#M000002" class="method-signature">
+          <span class="method-name">mapped?</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
+          <p>
+returns true or false dependent on the internal mapping state
+</p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000005-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000005-source">
+            onclick="toggleCode('M000002-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000002-source">
 <pre>
-<span class="ruby-comment cmt"># File db/migrations/20101211223018_bookie_game.rb, line 13</span>
-  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">down</span>
-    <span class="ruby-identifier">drop_table</span> <span class="ruby-identifier">:bookie_games</span>
-  <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000004" class="method-detail">
-        <a name="M000004"></a>
-
-        <div class="method-heading">
-          <a href="#M000004" class="method-signature">
-          <span class="method-name">up</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000004-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000004-source">
-<pre>
-<span class="ruby-comment cmt"># File db/migrations/20101211223018_bookie_game.rb, line 2</span>
-  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">up</span>
-    <span class="ruby-identifier">create_table</span> <span class="ruby-identifier">:bookie_games</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
-      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">references</span> <span class="ruby-identifier">:bookmaker</span>, <span class="ruby-identifier">:game</span>
-      
-      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">string</span> <span class="ruby-identifier">:team1</span>, <span class="ruby-identifier">:team2</span>
-      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">string</span> <span class="ruby-identifier">:sport</span>, <span class="ruby-identifier">:league</span>
-            
-      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">timestamps</span>
-    <span class="ruby-keyword kw">end</span>
+<span class="ruby-comment cmt"># File models/bookie_game.rb, line 27</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mapped?</span>
+    <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">game</span>.<span class="ruby-identifier">nil?</span>
   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>

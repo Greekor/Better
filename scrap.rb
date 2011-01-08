@@ -1,3 +1,5 @@
+# coding: utf-8
+
 
 # create Bookmaker
 bookie = Bookmaker.find_or_create_by_name("Pinnacle")
@@ -93,7 +95,7 @@ end
 # Game: LA Lakers vs Pittsburgh
 # Bet: Handi 1,5
 odd33 = Odd.find_or_create_by_bookie_game_id_and_betname(bookie2game1.id, "Handi 1,5") do |o|
-  o.odd1 = 1.7
+  o.odd1 = -142
   o.odd2 = 2.35
 end
 
@@ -140,74 +142,3 @@ bookie1game2.save!
 
 bookie2game1.save!
 bookie2game2.save!
-
-
-
-# Read Game
-
-games = Game.find(:all, :include => { :odds => :bet })
-games.each do |game|
-  puts "+++++++++++++++"
-  puts "#{Teamname.find(game.team1_id).name} vs. #{Teamname.find(game.team2_id).name}" unless game.team1_id.nil? or game.team2_id.nil? 
-  game.bookie_games
-  puts "#{game.bookie_games.size} BookieGames mapped"
-  game.bookie_games.each do |bookiegame|
-    puts "\t#{bookiegame.bookmaker.name}: #{bookiegame.team1} vs. #{bookiegame.team2} playing #{bookiegame.sport} in #{bookiegame.league}"
-    bookiegame.odds.each do |odd|
-      puts "\t\t#{odd.bet.bet.name} => #{odd.odd1} - #{odd.odd2}"
-    end
-  end
-  
-  ActiveRecord::Base.logger.info("LOS GEHTS")
-   
-=begin
- puts "--Odd--"
-odds_by_betid = {};
-game.odds.find(:all, :include => :bet).each do |odd|
-  if (odds_by_betid.has_key? odd.bet.id)
-    odds_by_betid[odd.bet.id][:odds].push odd
-  else
-    odds_by_betid[odd.bet.id] = { :bet => odd.bet, :odds => [odd] }
-  end
-end
-
-odds_by_betid.each_pair { |betid,betinfo|
-  puts "Bet: #{betinfo[:bet].name}:"
-  betinfo[:odds].each {
-    |odd|
-    puts "  #{odd.odd1} - #{odd.odd2}"
-  }
-}
-=end
-
-puts "--Odd--"
-odds_by_betid = {};
-game.odds.find(:all, :include => [:bet, { :bookie_game => :bookmaker }]).each do |odd|
-  if (odds_by_betid.has_key? odd.bet.id)
-    odds_by_betid[odd.bet.id][:odds].push({ :odd => odd, :bookmaker => odd.bookie_game.bookmaker})
-  else
-    odds_by_betid[odd.bet.id] = { :bet => odd.bet, :odds => [{ :odd => odd, :bookmaker => odd.bookie_game.bookmaker}] }
-  end
-end
-
-odds_by_betid.each_pair { |betid,betinfo|
-  puts "Bet: #{betinfo[:bet].name}:"
-  betinfo[:odds].each {
-    |odd|
-    puts "  #{odd[:bookmaker].name}: #{odd[:odd].odd1} - #{odd[:odd].odd2}"
-    #puts odd[:odd].inspect
-  }
-}
-
-puts "+++++++"
-
-ActiveRecord::Base.logger.info("ENDE")
-
-end
-
-# list unmapped teamnames
-Teamname.unmapped.each do |u|
-  puts "#{u.bookmaker.name}: #{u.name}"
-end
-
-
