@@ -1,6 +1,6 @@
 # Usage for scrapers
 
-First thing to do: finding or creating a new bookmaker specified by its name:
+First thing to do: finding or creating a new `Bookmaker` specified by its name:
 	bookie = Bookmaker.find_or_create("bookie_name")
 
 While scraping games, you need to find or create the corresponding `BookieGame`:
@@ -9,8 +9,8 @@ While scraping games, you need to find or create the corresponding `BookieGame`:
   		g.league = "NFL"
 	end
 	
-Now, 'bookie_game' has to be connected to 'bookie':
+Now, `bookie_game` has to be connected to `bookie`:
 	bookie.bookie_games.push(bookie_game)
 	
-Odds can be added to 'bookie_game' by:
+Odds can be added to `bookie_game` by:
 	bookie_game.odds_
